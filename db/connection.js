@@ -23,8 +23,8 @@ mongoose.connect(mongoURI, { useNewUrlParser: true })
 
 
 //brockstar93
-// mongodb+srv://marshallbrock:brockstar93@dictionary-v2jqf.mongodb.net/test?retryWrites=true&w=majority
+// heroku config:set DB_URL= mongodb+srv://marshallbrock:brockstar93@dictionary-v2jqf.mongodb.net/test?retryWrites=true&w=majority
 //mongoURI
-
+//heroku config:set DB_URL="mongodb+srv://marshallbrock:brockstar93@dictionary-v2jqf.mongodb.net/test?retryWrites=true&w=majority"
 
 module.exports = mongoose
