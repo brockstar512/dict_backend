@@ -1,12 +1,16 @@
 const mongoose = require ('../db/connection')
 const Schema = mongoose.Schema
 
-const ItemSchema = new Schema({
-        Song: String,
-        Artist: String,
-        Album: String,
-        Preview: String
+const WordSchema = new Schema({
+        word: String,
+        notes: String,
+        definitions: [
+            {
+            ref: 'Definition',
+            type: mongoose.Schema.Types.ObjectId
+            }
+        ] 
 })
 
-const Item = mongoose.model('Songs', ItemSchema)
-module.exports= Item
+const Word = mongoose.model('Words', WordSchema)
+module.exports= Word

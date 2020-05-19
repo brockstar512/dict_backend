@@ -10,12 +10,14 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 
-mongoose.connect(mongoURI, {useNewUrlParser: true})
-    .then(instance => {
-        console.log(`connected to db: `)
-    }).catch(error => {
-        console.log('connection failed', error)
-    })
+
+mongoose.connect(mongoURI, { useNewUrlParser: true })
+// mongoose.connect(mongoURI, {useNewUrlParser: true})
+//     .then(instance => {
+//         console.log(`connected to db: `)
+//     }).catch(error => {
+//         console.log('connection failed', error)
+//     })
 
 
 module.exports = mongoose

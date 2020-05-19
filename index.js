@@ -6,18 +6,23 @@ const cors = require('cors')
 
 const app = express()
 
-// const dictListRouter = require('./routes/ the route')
+const dictListRouter = require('./routes/routes')
 
 app.use(parser.json())
 app.use(cors())
 
-// app.use('/api/wordList', dictListRouter)
-
+//redirect server to routes where the data is stored
 app.get('/', (req,res)=>{
-    res.send('the server is running')
+    res.redirect('/routes')
 })
-// app.get('/', (req, res)=>{
-//     res.redirect('route you want it to redirect to')
+
+//check if server is live
+// app.get('/', (req,res)=>{
+//     res.send('the server is running')
 // })
+
+
+app.use('/routes', dictListRouter)
+//app use this route for these routers
 
 app.listen(PORT, () => console.log('Server running on port:', PORT))
