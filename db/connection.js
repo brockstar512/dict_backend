@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 mongoose.Promise = Promise
 
+
+
+
 let mongoURI = ''
 if(process.env.NODE_ENV === 'production') {
     mongoURI = process.env.DB_URL
@@ -12,16 +15,16 @@ if(process.env.NODE_ENV === 'production') {
 
 
 mongoose.connect(mongoURI, { useNewUrlParser: true })
-// mongoose.connect(mongoURI, {useNewUrlParser: true})
-//     .then(instance => {
-//         console.log(`connected to db: `)
-//     }).catch(error => {
-//         console.log('connection failed', error)
-//     })
+    .then(instance => {
+        console.log(`connected to db: `)
+    }).catch(error => {
+        console.log('connection failed', error)
+    })
+
+
+//brockstar93
+// mongodb+srv://marshallbrock:brockstar93@dictionary-v2jqf.mongodb.net/test?retryWrites=true&w=majority
+//mongoURI
 
 
 module.exports = mongoose
-
-//mongodb+srv://marshallbrock:brockstar93@cluster0-dl8yi.mongodb.net/test?retryWrites=true&w=majority
-//run this in terminal 
-//heroku config:set DB_URL="mongodb+srv://marshallbrock:brockstar93@cluster0-dl8yi.mongodb.net/test?retryWrites=true&w=majority" 

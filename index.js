@@ -25,7 +25,7 @@ app.get('/', (req,res)=>{
 app.use('/routes', dictListRouter)
 //app use this route for these routers
 
-// app.listen(PORT, () => console.log('Server running on port:', PORT))
+app.listen(PORT, () => console.log('Server running on port:', PORT))
  
-app.listen(app.get("port"), () => {
-    console.log(`✅ PORT: ${app.get("port")} 🌟`);});
+// app.listen(app.get("port"), () => {
+//     console.log(`✅ PORT: ${app.get("port")} 🌟`);});
