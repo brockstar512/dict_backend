@@ -1,6 +1,8 @@
+const mongoose = require('./connection')
 const Word = require('../models/Word')
 const Definition = require('../models/Definition')
-const mongoose = require('./connection')
+
+
 
 
 // Word.deleteMany().then(()=> Model.Word.create({

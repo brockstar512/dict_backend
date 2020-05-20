@@ -20,7 +20,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true })
     }).catch(error => {
         console.log('connection failed', error)
     })
-//mongodb+srv://dbadmin:dbadmin@cluster0-6a6h6.mongodb.net/test?retryWrites=true&w=majority
+// heroku config:set DB_URL="mongodb+srv://dbadmin:dbadmin@cluster0-6a6h6.mongodb.net/test?retryWrites=true&w=majority"
 //dbadmin
 
 module.exports = mongoose
