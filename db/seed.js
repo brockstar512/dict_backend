@@ -1,6 +1,6 @@
 const mongoose = require('./connection')
 const Definition = require('../models/Definition')
-const Word = require('../models/word')
+const Word = require('../models/Word')
 
 
 
