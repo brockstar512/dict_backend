@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "db:seed": "node ./db/seed",
     "start": "node index.js"
     
     

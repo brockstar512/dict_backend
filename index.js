@@ -27,5 +27,3 @@ app.use('/routes', dictListRouter)
 
 app.listen(PORT, () => console.log('Server running on port:', PORT))
  
-// app.listen(app.get("port"), () => {
-//     console.log(`✅ PORT: ${app.get("port")} 🌟`);});

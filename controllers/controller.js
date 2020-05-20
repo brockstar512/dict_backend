@@ -41,6 +41,16 @@ const removeDef = (req, res) => {
     }))
 }
 
+
+
+const AddByDef = (req, res) => {
+    Definition.create(req.body).then(def => Word.findOne({_id:req.params.WordId}).populate('definitions').then(W => {
+        W.definitions.push(def._id)
+        W.save()
+        res.json(W)
+    }))
+}
+
 //----------------
 //didnt
 //add def
@@ -59,13 +69,17 @@ const removeDef = (req, res) => {
 //it seems like populate only works in tandum with finding the parent
 
 //worked
-const AddByDef = (req, res) => {
-    Definition.create(req.body).then(def => Word.findOne({_id:req.params.WordId}).populate('definitions').then(W => {
-        W.definitions.push(def._id)
-        W.save()
-        res.json(W)
-    }))
-}
+
+
+
+
+// const AddByDef = (req, res) => {
+//     Definition.create(req.body).then(def => Word.findOne({_id:req.params.WordId}).populate('definitions').then(W => {
+//         W.definitions.push(def._id)
+//         W.save()
+//         res.json(W)
+//     }))
+// }
 
 //reference
 // const create = (req, res) => {
