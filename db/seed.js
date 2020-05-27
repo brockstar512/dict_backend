@@ -28,7 +28,7 @@ let example = Word.create({
   }).then(word => {
     Promise.all([
       Definition.create({
-        def: ["the occurrence and development of events by chance in a happy or beneficial way."],
+        def: "the occurrence and development of events by chance in a happy or beneficial way.",
         partOfSpeech: "noun",
         sentence: "a fortunate stroke of serendipity"
       }).then(def => {
@@ -40,3 +40,4 @@ let example = Word.create({
         })
     })
 })
+// def: ["the occurrence and development of events by chance in a happy or beneficial way."]
