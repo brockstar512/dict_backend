@@ -1,5 +1,5 @@
 const express = require('express')
-const Word = require('../models/word')
+const Word = require('../models/Word')
 const Definition = require('../models/Definition')
 
 const getAll = (req, res) => {

@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 
 
 const DefinitionSchema = new Schema({
-    def: String,
+    def: Array,
     partOfSpeech: String,
-    sentence: String,
+    // sentence: String,
 })
 
 //export model
