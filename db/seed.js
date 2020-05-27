@@ -30,7 +30,7 @@ let example = Word.create({
       Definition.create({
         def: ["the occurrence and development of events by chance in a happy or beneficial way."],
         partOfSpeech: "noun",
-        // sentence: "a fortunate stroke of serendipity"
+        sentence: "a fortunate stroke of serendipity"
       }).then(def => {
         word.definitions.push(def)
       })
