@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 
 
 const DefinitionSchema = new Schema({
-    def: [String],
+    def: String,
     partOfSpeech: String,
     sentence: String,
 })
@@ -13,3 +13,4 @@ const DefinitionSchema = new Schema({
 const Definition = mongoose.model('Definition', DefinitionSchema)
 module.exports = Definition
 
+// def: [String],
